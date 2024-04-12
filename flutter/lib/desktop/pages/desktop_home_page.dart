@@ -22,6 +22,7 @@ import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:window_manager/window_manager.dart';
 import 'package:window_size/window_size.dart' as window_size;
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../widgets/button.dart';
 
@@ -64,7 +65,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
       children: [
         buildLeftPane(context),
         if (!isIncomingOnly) const VerticalDivider(width: 1),
-        if (!isIncomingOnly) Expanded(child: buildRightPane(context)),
+        //if (!isIncomingOnly) Expanded(child: buildRightPane(context)),
       ],
     );
   }
@@ -420,9 +421,16 @@ class _DesktopHomePageState extends State<DesktopHomePage>
       padding:
           const EdgeInsets.only(left: 20.0, right: 16, top: 16.0, bottom: 5),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          SvgPicture.asset(
+            "assets/paysdesherbiers_100.svg",
+            alignment: Alignment.center,
+          ),
+          SizedBox(
+            height: 10.0,
+          ),
           Column(
             children: [
               if (!isOutgoingOnly)
@@ -436,7 +444,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
             ],
           ),
           SizedBox(
-            height: 10.0,
+            height: 30.0,
           ),
           if (!isOutgoingOnly)
             Text(

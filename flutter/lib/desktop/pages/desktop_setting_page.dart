@@ -23,7 +23,7 @@ import 'package:flutter_hbb/desktop/widgets/scroll_wrapper.dart';
 import '../../common/widgets/dialog.dart';
 import '../../common/widgets/login.dart';
 
-const double _kTabWidth = 200;
+const double _kTabWidth = 150;
 const double _kTabHeight = 42;
 const double _kCardFixedWidth = 540;
 const double _kCardLeftMargin = 15;
@@ -33,7 +33,7 @@ const double _kCheckBoxLeftMargin = 10;
 const double _kRadioLeftMargin = 10;
 const double _kListViewBottomMargin = 15;
 const double _kTitleFontSize = 20;
-const double _kContentFontSize = 15;
+const double _kContentFontSize = 13;
 const Color _accentColor = MyTheme.accent;
 const String _kSettingPageControllerTag = 'settingPageController';
 const String _kSettingPageIndexTag = 'settingPageIndex';

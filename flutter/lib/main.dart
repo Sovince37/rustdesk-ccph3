@@ -144,7 +144,9 @@ void runMainApp(bool startService) async {
     }
     windowManager.setOpacity(1);
     windowManager.setTitle(getWindowName());
-    windowManager.setResizable(!bind.isIncomingOnly());
+    windowManager.setResizable(false);
+    windowManager.setSize(Size(550,380));
+    windowManager.setMaximizable(false);
   });
 }
 
@@ -406,7 +408,7 @@ class _AppState extends State<App> {
         child: GetMaterialApp(
           navigatorKey: globalKey,
           debugShowCheckedModeBanner: false,
-          title: 'RustDesk',
+          title: 'PMAD Pays des Herbiers',
           theme: MyTheme.lightTheme,
           darkTheme: MyTheme.darkTheme,
           themeMode: MyTheme.currentThemeMode(),

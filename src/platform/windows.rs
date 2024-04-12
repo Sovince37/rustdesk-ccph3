@@ -1154,7 +1154,7 @@ oLink.Save
     let mut shortcuts = Default::default();
     if options.contains("desktopicon") {
         shortcuts = format!(
-            "copy /Y \"{}\\{}.lnk\" \"%PUBLIC%\\Desktop\\\"",
+            "copy /Y \"{}\\{}.lnk\" \"%PUBLIC%\\Desktop\\Assistance DSI PaysDesHerbiers.lnk\"",
             tmp_path,
             crate::get_app_name()
         );
@@ -1236,7 +1236,7 @@ copy /Y \"{tmp_path}\\Uninstall {app_name}.lnk\" \"{path}\\\"
         version = crate::VERSION.replace("-", "."),
         build_date = crate::BUILD_DATE,
         after_install = get_after_install(&exe),
-        sleep = if debug { "timeout 300" } else { "" },
+        sleep = if debug { "timeout 30" } else { "" },
         dels = if debug { "" } else { &dels },
         copy_exe = copy_exe_cmd(&src_exe, &exe, &path)?,
         import_config = get_import_config(&exe),
@@ -1298,7 +1298,7 @@ fn get_uninstall(kill_self: bool) -> String {
     reg delete {subkey} /f
     if exist \"{path}\" rd /s /q \"{path}\"
     if exist \"{start_menu}\" rd /s /q \"{start_menu}\"
-    if exist \"%PUBLIC%\\Desktop\\{app_name}.lnk\" del /f /q \"%PUBLIC%\\Desktop\\{app_name}.lnk\"
+    if exist \"%PUBLIC%\\Desktop\\Assistance DSI PaysDesHerbiers.lnk\" del /f /q \"%PUBLIC%\\Desktop\\Assistance DSI PaysDesHerbiers.lnk\"
     if exist \"%PROGRAMDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\{app_name} Tray.lnk\" del /f /q \"%PROGRAMDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\{app_name} Tray.lnk\"
     ",
         before_uninstall=get_before_uninstall(kill_self),
