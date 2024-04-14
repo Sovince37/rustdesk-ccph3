@@ -64,7 +64,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         buildLeftPane(context),
-        if (!isIncomingOnly) const VerticalDivider(width: 1),
+        //if (!isIncomingOnly) const VerticalDivider(width: 1),
         //if (!isIncomingOnly) Expanded(child: buildRightPane(context)),
       ],
     );
@@ -116,6 +116,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
       if (bind.isCustomClient())
         Align(
           alignment: Alignment.center,
+          width: 500,
           child: MouseRegion(
             cursor: SystemMouseCursors.click,
             child: GestureDetector(
