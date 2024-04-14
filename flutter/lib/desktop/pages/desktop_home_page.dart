@@ -116,7 +116,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
       if (bind.isCustomClient())
         Align(
           alignment: Alignment.center,
-          // width: 500,
+          width: 500,
           child: MouseRegion(
             cursor: SystemMouseCursors.click,
             child: GestureDetector(
