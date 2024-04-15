@@ -178,7 +178,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
       value: gFFI.serverModel,
       child: Container(
         //width: isIncomingOnly ? 280.0 : 200.0,
-        width: isIncomingOnly ? 500.0 : 500.0,
+        width: isIncomingOnly ? 550.0 : 550.0,
         color: Theme.of(context).colorScheme.background,
         child: DesktopScrollWrapper(
           scrollController: _leftPaneScrollController,
