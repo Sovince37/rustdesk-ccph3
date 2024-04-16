@@ -600,6 +600,6 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("share_warning_tip", ""),
         ("Everyone", ""),
         ("ab_web_console_tip", ""),
-        ("allow-only-conn-window-open-tip", ""),
+        ("allow-only-conn-window-open-tip", "Autoriser les connexions uniquement si la fenetre principale est ouverte"),
     ].iter().cloned().collect();
 }
